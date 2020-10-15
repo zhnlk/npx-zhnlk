@@ -81,15 +81,15 @@ const questions1 = [
     {
         type: "list",
         name: "language",
-        message: "Select your language?",
+        message: `选择你的语言? ${chalk.green.bold("/")} Select your language?`,
         choices: [
-            {
-                name: `English`,
-                value: "english"
-            },
             {
                 name: `中文`,
                 value: "chinese"
+            },
+            {
+                name: `English`,
+                value: "english"
             }
         ]
     }
@@ -137,7 +137,6 @@ prompt(questions1).then(answer => {
                     console.log(`\n${chalk.hex("#f90").bold("Alpaca AI")}已退出`);
                     return true
                 }else{
-             
                     request.post({
                         url:'https://alpaca.run/apis/ai/text', 
                         form:{
@@ -146,7 +145,8 @@ prompt(questions1).then(answer => {
                         }
                     }, function(error, response) {
                         let resText = JSON.parse(response.body).message
-                        console.log(`\n${chalk.hex("#f90").bold("Alpaca AI")}: ${resText}`);
+                        console.log(`\n${chalk.hex("#f90").bold("Alpaca AI")}: ${resText}\n`);
+                        return false
                     })
 
                 }
@@ -171,7 +171,7 @@ prompt(questions1).then(answer => {
                             setTimeout(()=>{
                                 console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 你好啊，我是Alpaca AI,一个人工智能，你可以打字和我聊天！！！！`);
                                 setTimeout(()=>{
-                                    console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 我带有脏话检测功能，所以请文明发言哦！！！！`);
+                                    console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 我带有脏话检测功能，所以请文明发言哦！！！！\n\n`);
                                     prompt(alpacaAI).then(() => {
                                         setTimeout(()=>{
                                             clear()
@@ -228,7 +228,7 @@ prompt(questions1).then(answer => {
                     name: lmap.get(language).question4,
                     value: () => {
                         console.log(lmap.get(language).answer4);
-                        //open("https://cdn.alpaca.run/default/ph.jpg")
+                        open("https://cdn.alpaca.run/default/ph.jpg")
                     }
                 }
             ]
