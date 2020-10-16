@@ -1,7 +1,7 @@
 {
-  "name": "alpaca-bi",
+  "name": "zhnlk",
   "version": "1.0.6",
-  "description": "Alpaca Bi Info",
+  "description": "zhnlk fork from npx AlpacaBi",
   "main": "index.js",
   "bin": {
     "anmol": "./index.js"
@@ -19,11 +19,11 @@
     "qrcode-terminal": "^0.12.0",
     "request": "^2.88.2"
   },
-  "author": "Alpaca Bi",
+  "author": "Eran Cheung",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlpacaBi/npx-alpaca-bi.git"
+    "url": "git+https://github.com/zhnlk/npx-zhnlk.git"
   },
-  "homepage": "https://github.com/AlpacaBi/npx-alpaca-bi#readme",
+  "homepage": "https://github.com/zhnlk/npx-zhnlk#readme",
   "license": "ISC"
 }

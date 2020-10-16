@@ -18,15 +18,13 @@ const prompt = inquirer.createPromptModule();
 let lmap = new Map()
 
 lmap.set("english",{
-    name: chalk.bold.green("             Alpaca Bi Resume"),
-    work: `${chalk.white("Frone-end Engineer at")} ${chalk
+    name: chalk.bold.green("             Eran Cheung's Resume"),
+    work: `${chalk.white("Pricipal FullStack Engineer at")} ${chalk
         .hex("#FF0000")
-        .bold("Vtron")}`,
-    twitter: chalk.gray("https://twitter.com/") + chalk.cyan("AlpacaBi"),
-    github: chalk.gray("https://github.com/") + chalk.green("AlpacaBi"),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("AlpacaBi"),
-    web: chalk.cyan("https://alpaca.run"),
-    npx: chalk.red("npx") + " " + chalk.white("anmol"),
+        .bold("QuadTalent")}`,
+    github: chalk.gray("https://github.com/") + chalk.green("zhnlk"),
+    web: chalk.cyan("https://erankk.com"),
+    npx: chalk.red("npx") + " " + chalk.white("zhnlk"),
 
     labelWork: chalk.white.bold("       Work:"),
     labelTwitter: chalk.white.bold("    Twitter:"),
@@ -40,8 +38,8 @@ lmap.set("english",{
     answer1:"\nDone, see you soon at inbox.\n",
     question2:`-Contact me through ${chalk.green.bold("WeChat")}?`,
     answer2:"Scan the wechat qrcode to add my WeChat!!",
-    question3:`-${chalk.yellow.bold("Banana dance!!!")}`,
-    answer3:"\nbanana!!!!\n",
+    // question3:`-${chalk.yellow.bold("Banana dance!!!")}`,
+    // answer3:"\nbanana!!!!\n",
     question4:"-Just quit.",
     answer4:"\nBye!!!!\n",
 
@@ -49,13 +47,12 @@ lmap.set("english",{
 })
 
 lmap.set("chinese",{
-    name: chalk.bold.green("            Alpaca Bi个人简历"),
-    work: `${chalk.white("在")}${chalk.hex("#FF0000").bold("Vtron")}${chalk.white("担任前端工程师")}`,
-    twitter: chalk.gray("https://twitter.com/") + chalk.cyan("AlpacaBi"),
-    github: chalk.gray("https://github.com/") + chalk.green("AlpacaBi"),
-    linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("AlpacaBi"),
-    web: chalk.cyan("https://alpaca.run"),
-    npx: chalk.red("npx") + " " + chalk.white("alpacabi"),
+    name: chalk.bold.green("            Eran Cheung 个人简历"),
+    work: `${chalk.white("在")}${chalk.hex("#FF0000").bold("QuadTalent")}${chalk
+        .white("担任资深打杂工程师")}`,
+    github: chalk.gray("https://github.com/") + chalk.green("zhnlk"),
+    web: chalk.cyan("https://erankk.com"),
+    npx: chalk.red("npx") + " " + chalk.white("zhnlk"),
 
     labelWork: chalk.white.bold("       工作:"),
     labelTwitter: chalk.white.bold("    Twitter:"),
@@ -69,8 +66,8 @@ lmap.set("chinese",{
     answer1:"\n如果我看邮件了，我会尽快回复你\n",
     question2:`-加我${chalk.green.bold("微信")}好友`,
     answer2:"扫码加我微信!!",
-    question3:`-${chalk.yellow.bold("看香蕉君跳舞")}`,
-    answer3:"\n气氛逐渐蕉♂灼♂\n",
+    // question3:`-${chalk.yellow.bold("看香蕉君跳舞")}`,
+    // answer3:"\n气氛逐渐蕉♂灼♂\n",
     question4:"-退出",
     answer4:"\n走好不送\n",
 
@@ -163,34 +160,34 @@ prompt(questions1).then(answer => {
             name: "action",
             message: lmap.get(language).questionsMessage,
             choices: [
-                {
-                    name: lmap.get(language).alpacaAIMessage,
-                    value: () => {
-                        setTimeout(()=>{
-                            console.log(`${new Date().toLocaleString( )} 已成功连入Alpaca AI服务器,输入${chalk.red.bold("exit")}即可退出`);
-                            setTimeout(()=>{
-                                console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 你好啊，我是Alpaca AI,一个人工智能，你可以打字和我聊天！！！！`);
-                                setTimeout(()=>{
-                                    console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 我带有脏话检测功能，所以请文明发言哦！！！！\n\n`);
-                                    prompt(alpacaAI).then(() => {
-                                        setTimeout(()=>{
-                                            clear()
-                                            console.log("\n\n\n")
-                                            console.log(info);
-                                            prompt(questions2).then(answer => answer.action());
-                                        },1500)
-                                    })
-                                },1000)
-                            },1000)
-                        },1000)
+                // {
+                //     name: lmap.get(language).alpacaAIMessage,
+                //     value: () => {
+                //         setTimeout(()=>{
+                //             console.log(`${new Date().toLocaleString( )} 已成功连入Alpaca AI服务器,输入${chalk.red.bold("exit")}即可退出`);
+                //             setTimeout(()=>{
+                //                 console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 你好啊，我是Alpaca AI,一个人工智能，你可以打字和我聊天！！！！`);
+                //                 setTimeout(()=>{
+                //                     console.log(`${chalk.hex("#f90").bold("Alpaca AI")}: 我带有脏话检测功能，所以请文明发言哦！！！！\n\n`);
+                //                     prompt(alpacaAI).then(() => {
+                //                         setTimeout(()=>{
+                //                             clear()
+                //                             console.log("\n\n\n")
+                //                             console.log(info);
+                //                             prompt(questions2).then(answer => answer.action());
+                //                         },1500)
+                //                     })
+                //                 },1000)
+                //             },1000)
+                //         },1000)
                         
                         
-                    }
-                },
+                //     }
+                // },
                 {
                     name: lmap.get(language).question1,
                     value: () => {
-                        open("mailto:biguokang@outlook.com");
+                        open("mailto:zhnlk@hotmail.com");
                         console.log(lmap.get(language).answer1);
                         setTimeout(()=>{
                             console.log("\n\n\n")
@@ -203,7 +200,7 @@ prompt(questions1).then(answer => {
                     name: lmap.get(language).question2,
                     value: () => {
                         console.log(lmap.get(language).answer2)
-                        const url = 'https://u.wechat.com/MI8g1d4fSdEntqOdCrp-DU8';
+                        const url = 'https://u.wechat.com/MLkkr1IejcNtPv-1kUh-mPk';
                         qrcode.generate(url,{small:true});
                         setTimeout(()=>{
                             console.log("\n\n\n")
@@ -212,23 +209,23 @@ prompt(questions1).then(answer => {
                         },1500)
                     }
                 },
-                {
-                    name: lmap.get(language).question3,
-                    value: () => {
-                        console.log(lmap.get(language).answer3);
-                        open("https://cdn.alpaca.run/js/banana.html")
-                        setTimeout(()=>{
-                            console.log("\n\n\n")
-                            console.log(info);
-                            prompt(questions2).then(answer => answer.action());
-                        },1500)
-                    }
-                },
+                // {
+                //     name: lmap.get(language).question3,
+                //     value: () => {
+                //         console.log(lmap.get(language).answer3);
+                //         open("https://cdn.alpaca.run/js/banana.html")
+                //         setTimeout(()=>{
+                //             console.log("\n\n\n")
+                //             console.log(info);
+                //             prompt(questions2).then(answer => answer.action());
+                //         },1500)
+                //     }
+                // },
                 {
                     name: lmap.get(language).question4,
                     value: () => {
                         console.log(lmap.get(language).answer4);
-                        open("https://cdn.alpaca.run/default/ph.jpg")
+                        // open("https://cdn.alpaca.run/default/ph.jpg")
                     }
                 }
             ]

@@ -1,6 +1,6 @@
-# Alpaca Bi Info
+# Npx zhnlk Info
 
 ### How to use
 ```
-npx alpaca-bi
+npx zhnlk
 ```
